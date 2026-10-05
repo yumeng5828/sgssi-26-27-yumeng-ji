@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 def xor_bytes(a: bytes, b: bytes) -> bytes:
-    """Aplica XOR byte a byte entre dos cadenas de bytes de igual longitud."""
+    # Aplica XOR byte a byte entre dos cadenas de bytes de igual longitud.
     if len(a) != len(b):
         raise ValueError(
             f"Las cadenas deben tener la misma longitud: "
@@ -11,12 +11,12 @@ def xor_bytes(a: bytes, b: bytes) -> bytes:
 
 
 def a_hex(b: bytes) -> str:
-    """Devuelve una representación hexadecimal legible."""
+    # Devuelve una representación hexadecimal legible.
     return ' '.join(f'{x:02x}' for x in b)
 
 
 def a_ascii(b: bytes) -> str:
-    """Devuelve la representación ASCII (para mostrar el texto)."""
+    # Devuelve la representación ASCII (para mostrar el texto).
     return b.decode('utf-8', errors='replace')
 
 
@@ -75,9 +75,9 @@ def main():
     # --- Comprobación ---
     print(f"\n{'='*70}")
     if descifrado == mensaje:
-        print("✅ CORRECTO: el descifrado coincide con el mensaje original.")
+        print("CORRECTO: el descifrado coincide con el mensaje original.")
     else:
-        print("❌ ERROR: el descifrado NO coincide con el mensaje original.")
+        print("ERROR: el descifrado NO coincide con el mensaje original.")
     print(f"{'='*70}")
 
 
